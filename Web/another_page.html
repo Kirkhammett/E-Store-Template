@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/jquery-ui-git.js"></script>
+    <script src="style/Skripti/jscripti.js"></script>
+    <script src="style/Skripti/animacii.js"></script>
+    <script src="style/Skripti/koshnicka.js"></script>
+	<script src="style/Skripti/socijalni.js"></script>
+    <script src="style/Skripti/koshnicka_funkcii.js"></script>
+    <script src="style/Skripti/fade_funkcii.js"></script>
+    <script src="style/Skripti/sweetalert-master/lib/sweet-alert.min.js"></script>
+    
+    <head>
+        <title>FAQ</title>
+		<link rel="shortcut icon" href="style/finki-logo.png" />
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+        <link rel="stylesheet" type="text/css" href="style/sweetalert-master/lib/sweet-alert.css">
+    </head>
+    
+    <body>
+        <div id="glavna">
+            <div id="zaglavie">
+                <div id="logo">
+                    <div id="logo_tekst">
+                         <h1><a href="index.html">Е<span class="logo_colour">-Продавница</span></a></h1>
+
+                         <h2>Едноставно, Елегантно, Експресно.</h2>
+
+                    </div>
+                </div>
+                <div id="meni_bar">
+                    <ul id="meni">
+                        <li><a href="index.html">Дома</a>
+
+                        </li>
+                        <li><a href="examples.html">Производи</a>
+
+                        </li>
+                        <li><a href="page.html">Промовирај!</a>
+
+                        </li>
+                        <li class="selected"><a href="another_page.html">FAQ</a>
+
+                        </li>
+                        <li><a href="contact.html">Контакт</a>
+
+                        </li>
+						<li id="BtnOpen"><a href="#"><img style="margin-top:-7px;" height="26" src="style/fullcart.png"/><strong>Кошница</strong></a>
+                        <!--<li id="BtnOpen"><a href="#"><img height="34" src="style/kosnicka.svg"/><strong>Кошница</strong></a>-->
+                        </li>
+                        <li id="BtnOpen1"><a href="#"><img onMouseOver="smeni(this)" onMouseOut="normalna(this)" height="34" src="style/wishlist.png"/><strong>Желби</strong></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="sodrzina">
+                <br>
+                <div id="skrieno"></div>
+                <br>
+				<div id="skrieno2"></div>
+				<br>
+                <div class="stranicen_bar">
+                     <h3>Новости</h3>
+
+                     <h4><b>Каталог</b></h4>
+
+                     <h5>Јануари 28-ми, 2015</h5>
+
+                    <p>Сегашни производи
+                        <br /><a href="examples.html">Дознајте повеќе</a>
+
+                    </p>
+                     <h4><b>Нов панел за контакт</b></h4>
+
+                     <h5>Јануари 29-ти, 2015</h5>
+
+                    <p>Контакт инфо.
+                        <br /><a href="contact.html">Дознајте повеќе</a>
+
+                    </p>
+					<h3>Барај</h3>
+					 <a href="examples.html"> <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/baraj.png" alt="Search" title="Search" /></a>
+					<h3>Повеќе инфо:</h3>
+
+                    <ul class="socijalni" id="jquery">
+                        <li class="finki">	<a href="http://courses.finki.ukim.mk/user/profile.php?id=3930" target="_blank"><strong>Finki</strong></a>
+
+                        </li>
+                        <li class="facebook">	<a href="https://www.facebook.com/filip.boev" target="_blank"><strong>Facebook</strong></a>
+
+                        </li>
+                    </ul>
+			   </div>
+                <div id="sodrzini">
+                     <h1>Често поставувани прашања:</h1>
+					<img width="30%" style="right:34%; top:35%;" src="style/question.jpg"/></a> 
+                   <h6><b>Како да ве контактирам?</b></h6>
+                   <p style="position:relative; z-index: 1;">Во главниот панел за навигација се наоѓа секцијата за "Контакт". Taму ги имате сите информации.</p>
+				   <h6><b>Дали кога ќе стиснам "Нарачај" на продукт ке бидам наплатен/а за тоа?</b></h6>
+                   <p style="position:relative; z-index: 1;">Не, сите нарачки и желби се зачувуваат во т.н. "колачиња" за да служат како референса на тоа што сте посакале или сте нарачале.</p>
+				   <h6><b>Кога и како знам дека некој продукт ми е нарачан?</b></h6>
+                   <p style="position:relative; z-index: 1;">Кога во менито за кошничката ќе притиснете на копчето "Потврди нарачка" тогаш вашите продукти ќе бидат додадени во нашата база на податоци со сите потребни информации за наплата и достава.</p>
+				   <h6><b>Дали моите приватни информации се безбедни?</b></h6>
+                   <p style="position:relative; z-index: 1;">Да, користиме дополнителни мерки за безбедност како SSL конекција, исто така и вашите лозинки се енкодирани со SHA-2 енкрипција.</p>
+				   <h6><b>Дали продавате дипломи од ФИНКИ?</b></h6>
+                   <p style="position:relative; z-index: 1;">Не!</p>
+
+                </div>
+            </div>
+            <div id="podnozje">&copy; Филип Боев | <a href="https://github.com/Kirkhammett" target="_blank">Filip Boev - Github</a> 
+            </div>
+            <div id="podnozje">133086 ™</div>
+        </div>
+    </body>
+
+</html>

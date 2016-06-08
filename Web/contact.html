@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/jquery-ui-git.js"></script>
+    <script src="style/Skripti/jscripti.js"></script>
+    <script src="style/Skripti/animacii.js"></script>
+    <script src="style/Skripti/koshnicka.js"></script>
+    <script src="style/Skripti/koshnicka_funkcii.js"></script>
+    <script src="style/Skripti/socijalni.js"></script>
+    <script src="style/Skripti/fade_funkcii.js"></script>
+    <script src="style/Skripti/sweetalert-master/lib/sweet-alert.min.js"></script>
+    <style>
+        #map-canvas {
+            width: 500px;
+            height: 400px;
+        }
+    </style>
+    <!-- skriptata e zemena od https://developers.google.com/maps/tutorials/fundamentals/adding-a-google-map so dopolnitelni soodvetni koordinati -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+        function initialize() {
+            var mapCanvas = document.getElementById('map-canvas');
+            var mapOptions = {
+                center: new google.maps.LatLng(42.0126592, 21.4580209),
+                zoom: 15,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(mapCanvas, mapOptions)
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    
+    <head>
+        <title>Контакт</title>
+		<link rel="shortcut icon" href="style/finki-logo.png" />
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+        <link rel="stylesheet" type="text/css" href="style/sweetalert-master/lib/sweet-alert.css">
+    </head>
+    
+    <body>
+        <div id="glavna">
+            <div id="zaglavie">
+                <div id="logo">
+                    <div id="logo_tekst">
+                         <h1><a href="index.html">Е<span class="logo_colour">-Продавница</span></a></h1>
+
+                         <h2>Едноставно, Елегантно, Експресно.</h2>
+
+                    </div>
+                </div>
+                <div id="meni_bar">
+                    <ul id="meni">
+                        <li><a href="index.html">Дома</a>
+
+                        </li>
+                        <li><a href="examples.html">Производи</a>
+
+                        </li>
+                        <li><a href="page.html">Промовирај!</a>
+
+                        </li>
+                        <li><a href="another_page.html">FAQ</a>
+
+                        </li>
+                        <li class="selected"><a href="contact.html">Контакт</a>
+
+                        </li>
+						<li id="BtnOpen"><a href="#"><img style="margin-top:-7px;" height="26" src="style/fullcart.png"/><strong>Кошница</strong></a>
+                        <!--<li id="BtnOpen"><a href="#"><img height="34" src="style/kosnicka.svg"/><strong>Кошница</strong></a>-->
+                        </li>
+                        <li id="BtnOpen1"><a href="#"><img onMouseOver="smeni(this)" onMouseOut="normalna(this)" height="34" src="style/wishlist.png"/><strong>Желби</strong></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="sodrzina">
+                <br>
+                <div id="skrieno"></div>
+                <br>
+				<div id="skrieno2"></div>
+				<br>
+                <div class="stranicen_bar">
+                    <br>
+                    <!-- Applet od nadvoresen izvor -->
+                    <applet CODE="Clock3D.class" WIDTH="200" HEIGHT="200">
+                        <param name="fps" value="25">
+                        <param name="a1" value="12500">
+                        <param name="pixd" value="29">
+                        <param name="pixangle" value="8">
+                        <param name="radius" value="17">
+                        <param name="roty" value="-4">
+                        <param name="rotx" value="0">
+                        <param name="rotz" value="0">
+                        <param name="irotx" value="0">
+                        <param name="iroty" value="0">
+                        <param name="irotz" value="00">
+                        <param name="style" value="1">
+                        <param name="color" value="#00FF66">
+                        <param name="bgcolor" value="#000000">
+                        <param name="12hour" value="0">
+                    </applet>
+					<h3>Барај</h3>
+					 <a href="examples.html"> <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/baraj.png" alt="Search" title="Search" /></a>
+                     <h3>Повеќе инфо:</h3>
+
+                    <ul class="socijalni" id="jquery">
+                        <li class="finki">	<a href="http://courses.finki.ukim.mk/user/profile.php?id=3930" target="_blank"><strong>Finki</strong></a>
+
+                        </li>
+                        <li class="facebook">	<a href="https://www.facebook.com/filip.boev" target="_blank"><strong>Facebook</strong></a>
+
+                        </li>
+                    </ul>
+                </div>
+                <div id="sodrzini">
+                     <h1>Контактирајте нè</h1>
+
+                    <p>За било какви забелешки во врска со производите контактирајте нè на нашата e-mail адреса:</p>
+                    <form action="MAILTO:boev.filip@gmail.com" method="GET" enctype="text/plain">
+                        <div class="formi">
+                            <p><span>Име:</span>
+
+                                <input type="text" name="ime" value="" />
+                            </p>
+                            <p><span>Е-mail Адреса:</span>
+
+                                <input class="contact" type="text" name="email" value="" />
+                            </p>
+                            <p><span>Порака:</span>
+
+                                <textarea rows="8" cols="50" name="poraka"></textarea>
+                            </p>
+                            <p style="padding-top: 15px"><span>&nbsp;</span>
+
+                                <input class="kopce" type="submit" value="Прати" />
+                            </p>
+                        </div>
+                    </form>
+                </div>
+                <br>
+                <div id="map-canvas"></div>
+            </div>
+            <div id="podnozje">&copy; Филип Боев | <a href="https://github.com/Kirkhammett" target="_blank">Filip Boev - Github</a> 
+            </div>
+            <div id="podnozje">133086 ™</div>
+        </div>
+    </body>
+
+</html>

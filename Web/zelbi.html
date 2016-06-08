@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Желби</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+		<script> 
+		$(document).ready(function () 
+		{
+			vratiZelbiKolace();
+		});
+		</script>
+    </head>
+    <body>
+        <table cellpadding="4" cellspacing="4" border="1" id="tabelaZelbi">
+            <th width="35%">Име:</th>
+            <th width="12%">Опис:</th>
+            <th width="27%">Цена:</th>
+			<th>Изглед:</th>
+        </table>
+        <table id="podrediZelbi">
+            <table>
+                <tfoot>
+                    <tr>
+                        <div align="center">
+                            <td colspan="3" align="right" id="vkupno_cena"></td>
+                        </div>
+                        <td>
+                            <div align="center">
+                                <input class="kopce" onClick="BrisiSiteZelbi()" type="submit" value="Избриши ги сите желби" />
+                            </div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE HTML>
+<html>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/jquery-ui-git.js"></script>
+    <script src="style/Skripti/jscripti.js"></script>
+    <script src="style/Skripti/animacii.js"></script>
+    <script src="style/Skripti/koshnicka.js"></script>
+	<script src="style/Skripti/socijalni.js"></script>
+    <script src="style/Skripti/koshnicka_funkcii.js"></script>
+    <script src="style/Skripti/fade_funkcii.js"></script>
+	<script src="style/Skripti/navigacija_produkti.js"></script>
+	<script src="style/Skripti/baraj.js"></script>
+    <!-- custom Alert prozorcinja, source-code: https://github.com/t4t5/sweetalert --->
+    <script src="style/sweetalert-master/lib/sweet-alert.min.js"></script>
+    <head>
+        <title>Производи</title>
+		<link rel="shortcut icon" href="style/finki-logo.png" />
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+        <!-- custom Alert prozorcinja CSS, source-code: https://github.com/t4t5/sweetalert --->
+        <link rel="stylesheet" type="text/css" href="style/sweetalert-master/lib/sweet-alert.css">
+    </head>
+    <body>
+        <div id="glavna">
+            <div id="zaglavie">
+                <div id="logo">
+                    <div id="logo_tekst">
+                         <h1><a href="index.html">Е<span class="logo_colour">-Продавница</span></a></h1>
+                         <h2>Едноставно, Елегантно, Експресно.</h2>
+                    </div>
+                </div>
+                <div id="meni_bar">
+                    <ul id="meni">
+                        <li><a href="index.html">Дома</a>
+
+                        </li>
+                        <li class="selected"><a href="examples.html">Производи</a>
+
+                        </li>
+                        <li><a href="page.html">Промовирај!</a>
+
+                        </li>
+                        <li><a href="another_page.html">FAQ</a>
+
+                        </li>
+                        <li><a href="contact.html">Контакт</a>
+
+                        </li>
+						<li id="BtnOpen"><a href="#"><img style="margin-top:-7px;" height="26" src="style/fullcart.png"/><strong>Кошница</strong></a>
+                        <!--<li id="BtnOpen"><a href="#"><img height="34" src="style/kosnicka.svg"/><strong>Кошница</strong></a>-->
+                        </li>
+                        <li id="BtnOpen1"><a href="#"><img onMouseOver="smeni(this)" onMouseOut="normalna(this)" height="34" src="style/wishlist.png"/><strong>Желби</strong></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="sodrzina">
+                <br>
+                <div id="skrieno"></div>
+                <br>
+				<div id="skrieno2"></div>
+				<br>
+                <div class="stranicen_bar">
+                     <h3>Производи на попуст</h3>
+
+                    <!-- Poradi nekoja pricina, appletot ne prikazuva sliki vo Browser, no raboti vo Eclipse.-->
+                    <Applet Code="Cart_example.class" archive="Cart.jar" width="210" height="500"></Applet>
+                    </Applet>
+                     <h3>Барај</h3>
+
+                    <form method="post">
+                        <p>
+                            <input id="test_baranje" class="baraj" type="text" name="prebaraj" placeholder="Prebaraj" />
+                        </p>
+                    </form>
+					<h3>Повеќе инфо:</h3>
+
+                    <ul class="socijalni" id="jquery">
+                        <li class="finki">	<a href="http://courses.finki.ukim.mk/user/profile.php?id=3930" target="_blank"><strong>Finki</strong></a>
+
+                        </li>
+                        <li class="facebook">	<a href="https://www.facebook.com/filip.boev" target="_blank"><strong>Facebook</strong></a>
+
+                        </li>
+                    </ul>
+                </div>
+                <div id="sodrzini">
+                     <h1>Производи:</h1>
+					<div class="div_kontejner">
+                    <table id="galerija" class="kontejner">
+                        <tr>
+                            <td height="170px" width="160px">
+								<p style="display:none;">gitara instrument les paul muzika </p>
+                                <li>
+                                    <img src="style/Proizvodi/LesPaul.jpg" height="170px" width="160px" alt="Продукт">
+                                    <input class="kopce" type="submit" value="Нарачај" onclick="DodajVoKoshnicka('Gitara','Les Paul',64000,'style/Proizvodi/LesPaul.jpg')" />
+									<input class="kopce" type="submit" value="Додај во желби" onclick="DodajVoZelbi('Gitara','Les Paul',64000,'style/Proizvodi/LesPaul.jpg')" />
+                                    <p>Gibson Les Paul</p>
+                                    <p>Цена: 64000 денари</p>
+                                </li>
+                            </td>
+                            <td height="170px" width="160px">
+								<p style="display:none;">kniga literatura game of thrones</p>
+                                <li>
+                                    <img src="style/Proizvodi/GoT.jpg" height="170px" width="160px" alt="Продукт">
+                                    <input class="kopce" type="submit" value="Нарачај" onclick="DodajVoKoshnicka('Kniga','Game Of Thrones',1000,'style/Proizvodi/GoT.jpg')" />
+									<input class="kopce" type="submit" value="Додај во желби" onclick="DodajVoZelbi('Kniga','Game Of Thrones',1000,'style/Proizvodi/GoT.jpg')" />
+                                    <p>Game of Thrones</p>
+                                    <p>Цена: 1000 денари</p>
+                                </li>
+                            </td>
+                            <td height="170px" width="160px">
+							<p style="display:none;">pojacalo instrument muzika</p>
+                                <li>
+                                    <img src="style/Proizvodi/Marshall.jpg" height="170px" width="160px" alt="Продукт">
+                                    <input class="kopce" type="submit" value="Нарачај" onclick="DodajVoKoshnicka('Pojacalo','Marshall 100W',49000,'style/Proizvodi/Marshall.jpg')" />
+									<input class="kopce" type="submit" value="Додај во желби" onclick="DodajVoZelbi('Pojacalo','Marshall 100W',49000,'style/Proizvodi/Marshall.jpg')" />
+                                    <p>Marshall 100W појачало</p>
+                                    <p>Цена: 49000 денари</p>
+                                </li>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="170px" width="160px">
+							<p style="display:none;">laptop mac kompjuter tehnologija</p>
+                                <li>
+                                    <img src="style/Proizvodi/MacBook.jpg" height="170px" width="160px" alt="Продукт">
+                                    <input class="kopce" type="submit" value="Нарачај" onclick="DodajVoKoshnicka('Mac','MacBook Stealth',74000,'style/Proizvodi/MacBook.jpg')" />
+									<input class="kopce" type="submit" value="Додај во желби" onclick="DodajVoZelbi('Mac','MacBook Stealth',74000,'style/Proizvodi/MacBook.jpg')" />
+                                    <p>MacBook Лаптоп</p>
+                                    <p>Цена: 74000 денари</p>
+                                </li>
+                            </td>
+                            <td height="170px" width="160px">
+								<p style="display:none;">iphone i phone mobilen telefon smartphone smart phone iphone6 kompjuter tehnologija</p>
+                                <li>
+                                    <img src="style/Proizvodi/telefon.jpg" height="170px" width="160px" alt="Продукт">
+                                    <input class="kopce" type="submit" value="Нарачај" onclick="DodajVoKoshnicka('Telefon','iPhone6',50000,'style/Proizvodi/telefon.jpg')" />
+									<input class="kopce" type="submit" value="Додај во желби" onclick="DodajVoZelbi('Telefon','iPhone6',50000,'style/Proizvodi/telefon.jpg')" />
+                                    <p>iPhone 6 телефон</p>
+                                    <p>Цена: 50000 денари</p>
+                                </li>
+                            </td>
+                            <td height="170px" width="160px">
+							<p style="display:none;">konzola igra gta5 gta</p>
+                                <li>
+                                    <img src="style/Proizvodi/igra.jpg" height="170px" width="160px" alt="Продукт">
+                                    <input class="kopce" type="submit" value="Нарачај" onclick="DodajVoKoshnicka('Igra','GTA 5',1700,'style/Proizvodi/igra.jpg')" />
+									<input class="kopce" type="submit" value="Додај во желби" onclick="DodajVoZelbi('Igra','GTA 5',1700,'style/Proizvodi/igra.jpg')" />
+                                    <p>GTA: V конзолна игра</p>
+                                    <p>Цена: 1700 денари</p>
+                                </li>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="170px" width="160px">
+							<p style="display:none;">playstation tehnologija 4 konzola ps4</p>
+                                <li>
+                                    <img src="style/Proizvodi/konzola.jpg" height="170px" width="160px" alt="Продукт ">
+                                    <input class="kopce" type="submit" value="Нарачај" onclick="DodajVoKoshnicka( 'Konzola', 'Play Station 4',32000, 'style/Proizvodi/konzola.jpg') " />
+									<input class="kopce" type="submit" value="Додај во желби" onclick="DodajVoZelbi( 'Konzola', 'Play Station 4',32000, 'style/Proizvodi/konzola.jpg') " />
+									<p> PlayStation 4 конзола </p>
+									<p> Цена: 32000 денари </p>
+								</li>
+                            </td>
+                            <td height="170px " width="160px ">
+							<p style="display:none;">igra konzolna igra</p>
+                                <li>
+                                    <img src="style/Proizvodi/hoodie.jpg " height="170px " width="160px " alt="Продукт ">
+                                    <input class="kopce" type="submit" value="Нарачај" onclick="DodajVoKoshnicka('Hoodie', 'Assassins Creed Hoodie',3500, 'style/Proizvodi/hoodie.jpg') " />
+									<input class="kopce" type="submit" value="Додај во желби" onclick="DodajVoZelbi('Hoodie', 'Assassins Creed Hoodie',3500, 'style/Proizvodi/hoodie.jpg') " />
+									<p> Assassins Creed дуксер </p>
+									<p> Цена: 3500 денари </p>
+								</li>
+                            </td>
+                            <td height="170px " width="160px ">
+								<p style="display:none;">tablet tehnologija kompjuter galaxy samsung s tab</p>
+                                <li>
+                                    <img src="style/Proizvodi/tablet.jpg " height="170px " width="160px " alt="Продукт ">
+                                    <input class="kopce" type="submit" value="Нарачај" onclick="DodajVoKoshnicka( 'Tablet', 'Samsung Galaxy Tab S',36000, 'style/Proizvodi/tablet.jpg') " />
+									<input class="kopce" type="submit" value="Додај во желби" onclick="DodajVoZelbi( 'Tablet', 'Samsung Galaxy Tab S',36000, 'style/Proizvodi/tablet.jpg') " />
+									<p> Galaxy Tab S таблет </p>
+									<p> Цена: 36000 денари </p>
+								</li>	
+                            </td>
+                        </tr>
+						<tr>
+							<td height="170px " width="160px ">
+							<p style="display:none;">select sport fudbal topka fudbalska</p>
+                                <li>
+                                    <img src="style/Proizvodi/Select.jpg " height="170px " width="160px " alt="Продукт ">
+                                    <input class="kopce" type="submit" value="Нарачај" onclick="DodajVoKoshnicka( 'Topka', 'Select' ,3000, 'style/Proizvodi/Select.jpg') " />
+									<input class="kopce" type="submit" value="Додај во желби" onclick="DodajVoZelbi( 'Topka', 'Select' ,3000, 'style/Proizvodi/Select.jpg')  " />
+									<p> Селект фудбалска топка </p>
+									<p> Цена: 3000 денари </p>
+								</li>	
+                            </td>
+							
+							<td height="170px " width="160px ">
+							 <p style="display:none;">jakna kozna koza</p>
+                                <li>
+                                    <img src="style/Proizvodi/leather.jpg " height="170px " width="160px " alt="Продукт ">
+                                    <input class="kopce" type="submit" value="Нарачај" onclick="DodajVoKoshnicka( 'Jakna', 'SoA L. Jacket' ,15000, 'style/Proizvodi/leather.jpg') " />
+									<input class="kopce" type="submit" value="Додај во желби" onclick="DodajVoZelbi( 'Jakna', 'SoA L. Jacket' ,15000, 'style/Proizvodi/leather.jpg') " />
+									<p>Кожна Јакна</p>
+									<p> Цена: 15000 денари </p>
+								</li>	
+                            </td>
+							
+							<td height="170px " width="160px ">
+							<p style="display:none;">pijano piano petrof instrument muzika</p>
+                                <li>
+                                    <img src="style/Proizvodi/petrof.jpg " height="170px " width="160px " alt="Продукт ">
+                                    <input class="kopce" type="submit" value="Нарачај" onclick="DodajVoKoshnicka( 'Piano', 'Petrof' ,130000, 'style/Proizvodi/petrof.jpg') " />
+									<input class="kopce" type="submit" value="Додај во желби" onclick="DodajVoZelbi( 'Piano', 'Petrof' ,130000, 'style/Proizvodi/petrof.jpg') " />
+									<p>Petrof Пијано</p>
+									<p> Цена: 130000 денари </p>
+								</li>	
+                            </td>
+						</tr>	
+							
+						<tr>
+							<td height="170px " width="160px ">
+							<p style="display:none;">gitara akusticna muzika instrument les paul</p>
+                                <li>
+                                    <img src="style/Proizvodi/akusticna.jpg" height="170px " width="160px " alt="Продукт ">
+                                    <input class="kopce" type="submit" value="Нарачај" onclick="DodajVoKoshnicka( 'Gitara', 'Gibson Acoustic' ,32000, 'style/Proizvodi/akusticna.jpg') " />
+									<input class="kopce" type="submit" value="Додај во желби" onclick="DodajVoZelbi( 'Gitara', 'Gibson Acoustic' ,32000, 'style/Proizvodi/akusticna.jpg') " />
+									<p>Акустична Гитара - Gibson</p>
+									<p> Цена: 32000 денари </p>
+								</li>	
+                            </td>
+							
+							<td height="170px " width="160px ">
+							<p style="display:none;">muzika cd pesni klasika</p>
+                                <li>
+                                    <img src="style/Proizvodi/Tchaikovsky.jpg" height="170px " width="160px " alt="Продукт ">
+                                    <input class="kopce" type="submit" value="Нарачај" onclick="DodajVoKoshnicka( 'CD', 'Tchaikovsky Classics' ,2000, 'style/Proizvodi/Tchaikovsky.jpg') " />
+									<input class="kopce" type="submit" value="Додај во желби" onclick="DodajVoZelbi('CD', 'Tchaikovsky Classics' ,2000, 'style/Proizvodi/Tchaikovsky.jpg') " />
+									<p>Tchaikovsky Classics ЦД</p>
+									<p> Цена: 2000 денари </p>
+								</li>	
+                            </td>
+							
+							<td height="170px " width="160px ">
+							<p style="display:none;">snowboard snoubord sport sneg</p>
+                                <li>
+                                    <img src="style/Proizvodi/snowboard.jpg" height="170px " width="160px " alt="Продукт ">
+                                    <input class="kopce" type="submit" value="Нарачај" onclick="DodajVoKoshnicka( 'Snowboard', 'Metallica Custom' ,40000, 'style/Proizvodi/snowboard.jpg') " />
+									<input class="kopce" type="submit" value="Додај во желби" onclick="DodajVoZelbi( 'Snowboard', 'Metallica Custom' ,40000, 'style/Proizvodi/snowboard.jpg') " />
+									<p>Metallica Сноуборд</p>
+									<p> Цена: 40000 денари </p>
+								</li>	
+                            </td>
+						</tr>
+						
+						<tr>						
+							<td height="170px " width="160px ">
+								<p style="display:none;">kniga literatura sherlock holmes</p>
+                                <li>
+                                    <img src="style/Proizvodi/Sherlock.jpg" height="170px " width="160px " alt="Продукт ">
+                                    <input class="kopce" type="submit" value="Нарачај" onclick="DodajVoKoshnicka( 'Kniga', 'Sherlock Collection' ,7200, 'style/Proizvodi/Sherlock.jpg') " />
+									<input class="kopce" type="submit" value="Додај во желби" onclick="DodajVoZelbi( 'Kniga', 'Sherlock Collection' ,7200, 'style/Proizvodi/Sherlock.jpg') " />
+									<p>Sherlock Holmes Колекција</p>
+									<p> Цена: 7200 денари </p>
+								</li>	
+                            </td>
+							
+							<td height="170px " width="160px ">
+								<p style="display:none;">kniga literatura html dummies</p>
+                                <li>
+                                    <img src="style/Proizvodi/html.jpg" height="170px " width="160px " alt="Продукт ">
+                                    <input class="kopce" type="submit" value="Нарачај" onclick="DodajVoKoshnicka( 'Kniga', 'HTML for Dummies' ,1300, 'style/Proizvodi/html.jpg') " />
+									<input class="kopce" type="submit" value="Додај во желби" onclick="DodajVoZelbi('Kniga', 'HTML for Dummies' ,1300, 'style/Proizvodi/html.jpg') " />
+									<p>HTML for Dummies</p>
+									<p> Цена: 1300 денари </p>
+								</li>	
+                            </td>
+					    </tr>
+											
+                    </table>			
+					</div>
+                     <h2>Дополнителни информации за производи:</h2>
+
+                    <table style="width:100%; border-spacing:0; ">
+                        <tr>
+                            <th>Продукт</th>
+                            <th>Информации</th>
+                        </tr>
+                        <tr>
+                            <td>Les Paul</td>
+                            <td>Доаѓа со комплет Gibson Custom додатни жици и екста хамбакери.</td>
+                        </tr>
+                        <tr>
+                            <td>iPhone 6</td>
+                            <td>Доаѓа со бонус 16gb SD картичка и Apple iPhone headset слушалици.</td>
+                        </tr>
+                        <tr>
+                            <td>PS 4 Console</td>
+                            <td>+ дополнителен Joystick и Assassins's Creed Unity конзолна игра како гратис.</td>
+                        </tr>
+                        <tr>
+                            <td>Galaxy Tab S</td>
+                            <td>Доаѓа со дополнителна 32gb SD картичка и гратис OTG кабел.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="podnozje">&copy; Филип Боев | <a href="https://github.com/Kirkhammett" target="_blank">Filip Boev - Github</a> 
+            </div>
+            <div id="podnozje">133086 ™</div>
+        </div>
+    </body>
+
+</html>
